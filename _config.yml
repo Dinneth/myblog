@@ -1,6 +1,6 @@
-title: Brume
-author: Aigars Dzerviniks
-description: It's simple. It's easy to use. It's a Jekyll theme.
+title: Din blog
+author: Din
+description: My blog. Forked from Jekyll theme 'brume'
 
 highlighter: null
 permalink: /:title
