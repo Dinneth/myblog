@@ -1,4 +1,6 @@
 # - url: /
 #  title: Home
 - url: https://weibo.com/dinneth
-  title: Home
+  title: 微博
+- url: https:/github.com/dinneth
+  title: GitHub
