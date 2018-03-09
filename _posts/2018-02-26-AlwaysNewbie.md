@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 永恒都是菜鸟
+title: 永远都是菜鸟
 tags:
   - 读后感
 ---

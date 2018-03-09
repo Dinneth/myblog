@@ -25,35 +25,34 @@ Windows上没法用，我用其它操作系统还不行，可吃饭靠Windows的
 
 Git将本地和服务器上的文档进行版本和分支管理，它在本地文件夹中产生一个`.git`文件夹，用于记录本地各种变化信息，通过一系列命令，将本地的变化先记录，再上传。最简单的应用如下：
 
-1. 拿来主义
 
+1.  拿来主义
 
-`git clone` 后面加URL，用于把网上别人的repository偷到本地当前目录来
+    `git clone` 后面加URL，用于把网上别人的repository偷到本地当前目录来
 
+2.  简单修改，定制自己的效果 / 日常更新博客文章
 
-2. 简单修改，定制自己的效果 / 日常更新博客文章
+    这一步与git命令行无关，自己可以学习网页前端的各种知识，把博客弄得更符合自己的意思。
 
-这一步与git命令行无关，自己可以学习网页前端的各种知识，把博客弄得更符合自己的意思。
+    在日常应用中，这一步用来更新博客文章（通常在`_posts`文件夹下），注意文件名按照原有的文件命名规律。文章前几行三条短横线之间的部分是头信息，通常是一些tag。
 
-在日常应用中，这一步用来更新博客文章（通常在`_posts`文件夹下），注意文件名按照原有的文件命名规律。文章前几行三条短横线之间的部分是头信息，通常是一些tag。
+3.  告诉git哪些更改是需要它管理的
 
-3. 告诉git哪些更改是需要它管理的
+    `git add`通常配合`-A`（注意区分大小写）来使用，把git监控到的更改，确认给git，这些就是需要它管的。
 
-`git add`通常配合`-A`（注意区分大小写）来使用，把git监控到的更改，确认给git，这些就是需要它管的。
+    在任何时候，都可以用`git status`来看看当前repository中哪些地方有更改。
 
-在任何时候，都可以用`git status`来看看当前repository中哪些地方有更改。
+4.  准备上传的用户名等信息
 
-4. 准备上传的用户名等信息
+    `git config user.email`加上以双引号包围的用户邮箱地址，可以告诉git，以哪个用户名进行commit命令的记录。例如：*git config user.email "youremail@github.com"*。此用法仅应用于当前repository，即当前目录。如果一次性指定所有目录的用户名，可以使用`git config --global user.email`。 
 
-`git config user.email`加上以双引号包围的用户邮箱地址，可以告诉git，以哪个用户名进行commit命令的记录。例如：*git config user.email "youremail@github.com"*。此用法仅应用于当前repository，即当前目录。如果一次性指定所有目录的用户名，可以使用`git config --global user.email`。 
+5.  确认提交变更
 
-5. 确认提交变更
-
-`git commit -m "some text"`确认提交变更，双引号内加入本次提交的备注。
+    `git commit -m "some text"`确认提交变更，双引号内加入本次提交的备注。
 
 6. 将变更推送至github服务器上
 
-`git push`将变更推送，此处可能提示输入github的用户名密码。
+    `git push`将变更推送，此处可能提示输入github的用户名密码。
 
 参考别人的图解，以上过程可以图示为：![git illustration][1]
 
@@ -152,6 +151,12 @@ log off then log on again
 
 > sudo apt-get install virtualbox-guest-dkms
 
+### Notepadqq
+
+在Windows下已经习惯使用Notepad++，但查了官网，并没有Linux版本。在Ubuntu上自然可以使用Wine，别人也有可以正常使用的，可是我的Ubuntu就是没办法正常启动Wine下的Notepad++，一启动就秒崩溃。
+
+感谢开源，有人专门模仿Notepad++开发了Notepadqq（今天才明白，qq对++，对仗工整啊:))。先是根据官网的提示，用Snap安装有诸多的好处，就先装了Snap，然后用Snap装Notepadqq（恐怖的700+MB），尽管安装Snap的时候并不是很顺利，但至少装完后Notepadqq启动很正常，原以为OK了，居然发现其实无法打开好多文件夹下的文件，都提示Permission Denied。一番搜索学习Linux文件夹权限，也没弄明白那9个字符的rwx权限结构。最后终于卸载Snap的包，老老实实用apt安装了Notepadqq，可以正常使用。
+
 ### 常用命令
 
 > printenv 显示系统变量
@@ -161,6 +166,8 @@ log off then log on again
 > sudo reboot
 >
 > uname -r 显示linux版本
+>
+> man <command\> 显示命令支持的参数
 
 
 [1]: https://wx2.sinaimg.cn/mw1024/6e471a1dgy1forj1s16ulj20s50f03zr.jpg 
