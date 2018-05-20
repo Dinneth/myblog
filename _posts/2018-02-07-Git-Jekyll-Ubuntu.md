@@ -170,4 +170,31 @@ log off then log on again
 > man <command\> 显示命令支持的参数
 
 
+## XX-Net
+
+这些天为了能够在google地图上标注记录一些计划的行程，又把FQ的事宜折腾了一下。今天基本上有一个阶段性的总结。
+
+### 代理服务器设置
+
+由于平时并不FQ，基本上没用Chrome，所以根本没装Chrome。结果没想到FireFox必须按照说明书手动配置浏览器Proxy，才能在第一步使用公共AppID的搜索中取得结果。设置方法，就是在Proxy设置中指定自动设置的pac地址为http://127.0.0.1:8086/proxy.pac即可。
+
+### 证书设置
+
+说来也挺智能的，其实在Status里面，这个应用会提示你做这些相应设置，只是一开始由于版本低还是没开启IPv6还是没注意到怎么的，反正折腾了很久才去导入证书。设置方法，就是在FireFox证书里面选择导入，然后选择下载路径下的证书就是了./data/gae_proxy/CA.crt。
+
+### IPv6
+
+最先怀疑没配置好的地方，说明读wiki文档，不但要每部分都读懂，还得有整体感啊。先安装package miredo，然后启动之sudo miredo，然后确认ifconfig里面出现了一个虚拟的teredo的网卡。
+
+### GAE
+
+当然，其间也不得不先用了一些简单的工具如无界（直接执行下载的u1803.exe）先在google上设置了自己的GAE project。然后在google主页，my account里面，找到security相关设置，把允许less safety application访问的开关置为on。
+
+### 总结日常操作启动
+
+sudo miredo
+sudo sh xx-net.sh
+确保FireFox里面的Proxy设置、证书设置是对的，就可以使用FireFox上网了
+
+
 [1]: https://wx2.sinaimg.cn/mw1024/6e471a1dgy1forj1s16ulj20s50f03zr.jpg 
