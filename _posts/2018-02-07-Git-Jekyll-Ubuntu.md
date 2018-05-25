@@ -170,6 +170,16 @@ log off then log on again
 > uname -r 显示linux版本
 >
 > man <command\> 显示命令支持的参数
+>
+> sudo sh xxxx.sh 启动.sh文件
+>
+> ifconifg 显示网卡信息
+>
+> sudo miredo 启动IPv6模拟模块
+>
+> sudo lshw -C network 列出网卡？
+> sudo rfkill list 取消网卡？
+
 
 
 ## XX-Net
