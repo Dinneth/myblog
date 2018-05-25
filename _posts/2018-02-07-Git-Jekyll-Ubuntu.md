@@ -92,6 +92,8 @@ Host machine - 指VirtualBox安装于上的物理计算机
 
 首先需要下载一个操作系统的.iso文件，然后在VirtualBox中新建一个Guest machine，并在属性中加载.iso文件至Guest的光驱，然后启动虚拟机，一步步安装操作系统。
 
+关于new guest machine时使用64位的问题，通常在new一个新的guest machine的时候，选择操作系统的时候，有可能看不到64位的选项，都是32位的。需要在BIOS里面的Security里面，找到CPU的visulization设置，visulization和V-T的那两个都enable了，同时保证Windows host machine里面的turn on/off Windows features里面的VType什么的是不勾选的。这样就可以在vitulbox里面看到64位的了。
+
 
 ### 如果出现花屏
 
