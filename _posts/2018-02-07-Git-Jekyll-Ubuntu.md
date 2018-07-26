@@ -196,7 +196,7 @@ log off then log on again
 
 ### IPv6
 
-最先怀疑没配置好的地方，说明读wiki文档，不但要每部分都读懂，还得有整体感啊。先安装package miredo，然后启动之sudo miredo，然后确认ifconfig里面出现了一个虚拟的teredo的网卡。
+最先怀疑没配置好的地方，说明读wiki文档，不但要每部分都读懂，还得有整体感啊。先安装package miredo，重启，然后启动miredo服务sudo miredo，然后确认ifconfig里面出现了一个虚拟的teredo的网卡。
 
 ### GAE
 
@@ -205,7 +205,9 @@ log off then log on again
 ### 总结日常操作启动
 
 sudo miredo
+
 sudo sh xx-net.sh
+
 确保FireFox里面的Proxy设置、证书设置是对的，就可以使用FireFox上网了
 
 
