@@ -180,6 +180,11 @@ log off then log on again
 > sudo lshw -C network 列出网卡？
 > sudo rfkill list 取消网卡？
 
+### 常用软件
+
+OpenShot Video Editor
+
+
 
 
 ## XX-Net
