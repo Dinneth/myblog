@@ -184,6 +184,16 @@ log off then log on again
 
 OpenShot Video Editor
 
+make AppImage run:
+
+> Make it executable 
+>
+> $ chmod a+x Subsurface*.AppImage
+>
+> and run!
+>
+> $ ./Subsurface*.AppImage
+
 
 
 
