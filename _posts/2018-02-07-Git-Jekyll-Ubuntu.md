@@ -182,7 +182,7 @@ log off then log on again
 
 ### 常用软件
 
-OpenShot Video Editor
+#### OpenShot Video Editor
 
 make AppImage run:
 
@@ -194,7 +194,20 @@ make AppImage run:
 >
 > $ ./Subsurface*.AppImage
 
+#### Simplescreenrecorder
 
+> $ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+>
+>$ sudo apt-get update
+>
+>$ sudo apt-get install simplescreenrecorder
+
+
+#### Convert video
+
+downscale 4K video to 1080p
+
+ffmpeg -y -i C0010.MP4 -vcodec copy -strict experimental -c:a aac output-fileC0010.MP4
 
 
 ## XX-Net
