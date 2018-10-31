@@ -209,6 +209,10 @@ downscale 4K video to 1080p
 
 ffmpeg -y -i C0010.MP4 -vcodec copy -strict experimental -c:a aac output-fileC0010.MP4
 
+#### Video play
+
+VLC video player
+
 
 ## XX-Net
 
