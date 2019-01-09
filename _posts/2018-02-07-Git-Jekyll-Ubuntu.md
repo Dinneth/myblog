@@ -117,6 +117,15 @@ Host machine - 指VirtualBox安装于上的物理计算机
 
 安装过程中，出现modprob vboxsf failed，查了很多资料，没能解决掉这个错误，但最后仍可以使用Share Folder功能。重启后，VirtualBox也提示Guest Additions do not appear to be available，但仍不影响Share Folder的功能。
 
+2019年1月装的时候，发现装完，不行。又查了virtualbox官网帮助，试着运行
+
+> sudo rcvboxadd setup
+>
+> sudo sh ./VBoxLinuxAdditions.run
+>
+
+重启client，就又好了
+
 #### 配置
 
 - VirtualBox下拉菜单或是属性中可以设置Share Folder。不明白为什么有两个设置，一个Machine Folders，一个Transient Folders。无论如何，点旁边带加号的图标，可以设置一个Host machine内的文件夹路径。
@@ -145,7 +154,23 @@ Preference，Language Support，把input method system改成fcitx
 
 log off then log on again
 
-现在系统托盘应该出现小企鹅标志了。Preference，fcitx configuration，去掉only show current language前面的勾，中文输入法应该显示在列表中了，
+现在系统托盘应该出现小企鹅标志了。Preference，fcitx configuration，去掉only show current language前面的勾，中文输入法应该显示在列表中了
+
+#### 虚机中原生中文输入法黑框看不见字
+
+只能装Sougou了
+
+下载Sougou Linux版，.deb文件
+
+> sudo apt remove sogoupinyin
+> 
+> sudo apt install libopencc1 fcitx-libs fcitx-libs-qt fonts-droid-fallback
+> 
+> sudo apt install libqtwebkit4
+> 
+> sudo dpkg -i sogoupinyin_2.2.0.0108_amd64.deb
+>
+
 
 ### 分辨率
 
@@ -181,6 +206,10 @@ log off then log on again
 > sudo rfkill list 取消网卡？
 
 ### 常用软件
+
+#### 下载工具
+
+axel; wget
 
 #### OpenShot Video Editor
 
