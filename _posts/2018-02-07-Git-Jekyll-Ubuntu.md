@@ -242,6 +242,14 @@ ffmpeg -y -i C0010.MP4 -vcodec copy -strict experimental -c:a aac output-fileC00
 
 VLC video player
 
+#### yEd
+
+流程图、泳道图（help - example graphs - BPMN
+
+https://www.yworks.com/yed-live/
+
+下载后 chmod +x 再 sudo sh ./xxxx.sh运行可以安装
+
 
 ## XX-Net
 
