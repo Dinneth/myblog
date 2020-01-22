@@ -203,13 +203,21 @@ log off then log on again
 > sudo miredo 启动IPv6模拟模块
 >
 > sudo lshw -C network 列出网卡？
+>
 > sudo rfkill list 取消网卡？
+> 
+> sudo fdisk -l 列出挂载的各个盘，包括U盘，为写盘做准备
+>
+> dd if=./DownloadedImage.img of=/dev/sdb 把镜像写入某个盘
+>
+> df -h 检查磁盘空间及挂载情况
+>
 
 ### 常用软件
 
 #### 下载工具
 
-axel; wget
+axel; wget; aria2c
 
 #### OpenShot Video Editor
 
@@ -227,9 +235,9 @@ make AppImage run:
 
 > $ sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
 >
->$ sudo apt-get update
+> $ sudo apt-get update
 >
->$ sudo apt-get install simplescreenrecorder
+> $ sudo apt-get install simplescreenrecorder
 
 
 #### Convert video
@@ -278,6 +286,11 @@ sudo miredo
 sudo sh xx-net.sh
 
 确保FireFox里面的Proxy设置、证书设置是对的，就可以使用FireFox上网了
+
+
+## 软路由
+
+LEDE 科学部分打开（艾斯艾斯啊），影响上宜家中国网站和一些其它网站，关闭就好了
 
 
 [1]: https://wx2.sinaimg.cn/mw1024/6e471a1dgy1forj1s16ulj20s50f03zr.jpg 
