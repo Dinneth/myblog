@@ -212,6 +212,7 @@ log off then log on again
 >
 > df -h 检查磁盘空间及挂载情况
 >
+> cp /dev/cdrom Win7.ISO 光盘制作成ISO文件
 
 ### 常用软件
 
