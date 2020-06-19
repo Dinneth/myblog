@@ -94,6 +94,8 @@ Host machine - 指VirtualBox安装于上的物理计算机
 
 关于new guest machine时使用64位的问题，通常在new一个新的guest machine的时候，选择操作系统的时候，有可能看不到64位的选项，都是32位的。需要在BIOS里面的Security里面，找到CPU的visulization设置，visulization和V-T的那两个都enable了，同时保证Windows host machine里面的turn on/off Windows features里面的VType什么的是不勾选的。这样就可以在vitulbox里面看到64位的了。
 
+引导新建的VirtualBox Client可以用小于4G的带PE的ISO文件，挂载在一个光驱上，再把另外的大于4G的ISO挂载在另一个光驱上，引导起来以后，先分区，一般不要只分一个区，然后再重启PE，就可以手工打开Ghost，还原另一个光驱上的镜像了。
+
 
 ### 如果出现花屏
 
